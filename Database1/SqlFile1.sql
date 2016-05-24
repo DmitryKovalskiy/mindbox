@@ -1,4 +1,8 @@
-﻿;WITH FirstSales(productId,customerId, [dateTime])as
+﻿/*
+При наличии данных о типе saleId, на мой взгляд скрипт можно сделать гораздо проще.
+*/
+
+;WITH FirstSales(productId,customerId, [dateTime])as
 (
 	SELECT ProductId,customerId, MIN[dateTime]
 	FROM Sales(NOLOCK)
